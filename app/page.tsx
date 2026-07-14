@@ -22,7 +22,7 @@ export default function Home() {
       <SiteHeader />
 
       <section className="hero" aria-labelledby="hero-title">
-        <div className="eyebrow"><span /> Endowment Justice Collective at Yale</div>
+        <div className="eyebrow">Endowment Justice Collective at Yale</div>
         <h1 id="hero-title">Yale’s money<br />is everyone’s business.</h1>
         <div className="hero-bottom">
           <p className="hero-dek">We organize students, workers, alumni, and New Haven neighbors to make Yale’s wealth answer to people — not profit.</p>
@@ -76,9 +76,12 @@ export default function Home() {
           <p>Yale publicly disclosed less than <strong>0.3%</strong> of its endowment in a February 2024 filing.</p>
           <a href="https://yaledailynews.com/blog/2024/04/29/analysis-how-much-does-yale-invest-in-military-weapons-manufacturing/" target="_blank" rel="noreferrer">See the reporting ↗</a>
         </div>
-        <div className="proof-chart" aria-label="Illustration showing 0.3 percent disclosed and 99.7 percent hidden">
-          <div className="chart-disclosed"><span>0.3%</span><small>disclosed</small></div>
-          <div className="chart-hidden"><span>99.7%</span><small>kept out of public view</small></div>
+        <div className="proof-chart" aria-label="Proportional illustration showing a 0.3 percent disclosed sliver and 99.7 percent kept out of public view">
+          <div className="chart-callout"><strong>0.3%</strong><span>disclosed</span><i aria-hidden="true">↓</i></div>
+          <div className="chart-bar">
+            <div className="chart-disclosed" aria-hidden="true" />
+            <div className="chart-hidden"><span>99.7%</span><small>kept out of public view</small></div>
+          </div>
         </div>
       </section>
 
