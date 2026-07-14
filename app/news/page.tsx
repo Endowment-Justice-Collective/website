@@ -1,0 +1,12 @@
+import type { Metadata } from "next";
+import { InnerPage } from "../site-chrome";
+export const metadata: Metadata = { title: "News & Coverage" };
+const stories=[
+  {date:"Feb. 2026",title:"Students renew pressure over ICE-linked companies",copy:"A teach-in connected Yale investments to immigration enforcement and the broader fight for divestment.",href:"https://timesofindia.indiatimes.com/education/news/yale-students-hold-teach-in-urging-divestment-from-ice-linked-companies/articleshow/128811497.cms"},
+  {date:"June 2025",title:"Students mobilize around the endowment tax fight",copy:"EJC members joined student advocacy as a federal proposal put Yale’s endowment and university priorities in the spotlight.",href:"https://yaledailynews.com/blog/category/university/student-life/page/3/"},
+  {date:"April 2024",title:"How much does Yale invest in weapons?",copy:"The News found that Yale disclosed under 0.3 percent of its endowment in a February 2024 SEC filing.",href:"https://yaledailynews.com/blog/2024/04/29/analysis-how-much-does-yale-invest-in-military-weapons-manufacturing/"},
+  {date:"April 2024",title:"Yale refuses weapons divestment",copy:"Students challenged Yale’s decision that authorized military weapons manufacturing did not meet its threshold for grave social injury.",href:"https://beineckeprotests.yaledailynews.com/"},
+  {date:"Nov. 2019",title:"Nobody wins at The Game",copy:"The Harvard–Yale football game protest drew hundreds onto the field and national attention to fossil fuel divestment.",href:"https://www.npr.org/2019/11/24/782505357/harvard-yale-game-delayed-by-student-protesters"},
+  {date:"Dec. 2018",title:"48 arrested at Investments Office sit-in",copy:"Students demanded divestment from fossil fuels and Puerto Rican debt in EJC’s first major coalition action.",href:"https://yaledailynews.com/blog/2018/12/10/students-arrested-in-divestment-sit-in/"},
+];
+export default function News(){return <InnerPage eyebrow="News & coverage" title={<>Keep the<br/>pressure visible.</>} intro="Reporting, explainers, and movement moments from the ongoing fight over Yale’s endowment." tone="cream"><section className="content-section"><div className="news-grid">{stories.map(s=><a className="news-card" key={s.title} href={s.href} target="_blank" rel="noreferrer"><time>{s.date}</time><h2>{s.title}</h2><p>{s.copy}</p><span>Read story ↗</span></a>)}</div></section></InnerPage>}

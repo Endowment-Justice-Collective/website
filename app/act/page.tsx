@@ -1,0 +1,8 @@
+import type { Metadata } from "next";
+import { InnerPage } from "../site-chrome";
+export const metadata: Metadata = { title: "Get Involved" };
+export default function Act(){return <InnerPage eyebrow="Take action" title={<>This fight<br/>needs you.</>} intro="You do not need to be a finance expert or a lifelong organizer. Bring your questions, your skills, and the people you care about." tone="blue"><section className="content-section"><div className="content-grid"><p className="content-label">Start here</p><div className="prose"><h2>Choose your way in.</h2><div className="action-grid">
+  <div className="action-card"><span>01</span><h3>Come to a meeting</h3><p>Meet the collective, hear what is moving, and find a team.</p><a href="mailto:endowmentjustice@yale.edu?subject=I%20want%20to%20join%20EJC">Ask about the next meeting ↗</a></div>
+  <div className="action-card"><span>02</span><h3>Get updates</h3><p>Receive action alerts, teach-ins, research drops, and meeting news.</p><a href="mailto:endowmentjustice@yale.edu?subject=Add%20me%20to%20EJC%20updates">Join the email list ↗</a></div>
+  <div className="action-card"><span>03</span><h3>Follow + share</h3><p>Help make the endowment’s hidden choices public knowledge.</p><a href="https://www.instagram.com/yaleendowmentjustice/" target="_blank" rel="noreferrer">Follow on Instagram ↗</a></div>
+ </div><h3>What can I work on?</h3><p>Research and investment tracing. Political education. Coalition outreach. Design and communications. Meeting facilitation. Action planning. History and archives. There is useful work at every experience level.</p></div></div></section></InnerPage>}

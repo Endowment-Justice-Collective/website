@@ -1,0 +1,13 @@
+import type { Metadata } from "next";
+import { InnerPage } from "../site-chrome";
+export const metadata: Metadata = { title: "Power Map" };
+export default function Power(){return <InnerPage eyebrow="Power map" title={<>Who decides<br/>where $44B goes?</>} intro="Yale’s ethical investment system looks participatory. The authority, however, concentrates as decisions move upward — while most holdings stay hidden." tone="dark"><section className="content-section">
+  <div className="content-grid"><p className="content-label">The official chain</p><div className="prose"><h2>Advice travels up. Power stays at the top.</h2><div className="power-chain">
+    <div className="power-node"><span>Community input</span><strong>Students, workers, faculty, alumni, New Haven</strong><p>Organize, research, submit proposals, testify, and create public pressure.</p></div>
+    <div className="power-node"><span>Advisory</span><strong>ACIR</strong><p>The Advisory Committee on Investor Responsibility reviews issues and recommends action.</p></div>
+    <div className="power-node"><span>Corporation committee</span><strong>CCIR</strong><p>The Corporation Committee on Investor Responsibility recommends policy and implements approved policy.</p></div>
+    <div className="power-node"><span>Formal authority</span><strong>Yale Corporation</strong><p>The Board of Trustees holds ultimate fiduciary and policy authority.</p></div>
+    <div className="power-node"><span>Execution</span><strong>Investments Office + external managers</strong><p>Manage the portfolio through public assets, private partnerships, and fund managers.</p></div>
+  </div><p>This structure creates distance between community demands and investment decisions. EJC’s democratization demand is about closing that distance.</p></div></div>
+  <div className="content-grid"><p className="content-label">The visibility gap</p><div className="prose"><h2>What the public can see is a sliver.</h2><div className="fact-row"><div className="fact"><strong>$44.1B</strong><span>Endowment, June 2025</span></div><div className="fact"><strong>&lt;0.3%</strong><span>Publicly disclosed in Feb. 2024 filing</span></div><div className="fact"><strong>99%+</strong><span>Outside that public snapshot</span></div></div><p>Quarterly SEC filings reveal some directly held U.S. equities. Private funds, limited partnerships, and other structures can keep the overwhelming majority out of public view. <a href="https://yaledailynews.com/blog/2024/04/29/analysis-how-much-does-yale-invest-in-military-weapons-manufacturing/" target="_blank" rel="noreferrer">Read the Yale Daily News analysis ↗</a></p></div></div>
+</section></InnerPage>}
