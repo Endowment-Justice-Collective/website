@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Archivo_Black, DM_Sans } from "next/font/google";
+import { DM_Sans, Newsreader } from "next/font/google";
 import "./globals.css";
 
-const display = Archivo_Black({ weight: "400", subsets: ["latin"], variable: "--font-display" });
+const display = Newsreader({ subsets: ["latin"], variable: "--font-display" });
 const body = DM_Sans({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
