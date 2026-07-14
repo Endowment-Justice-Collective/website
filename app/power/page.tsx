@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { InnerPage } from "../site-chrome";
 export const metadata: Metadata = { title: "Power Map" };
-export default function Power(){return <InnerPage eyebrow="Power map" title={<>Who decides<br/>where $44B goes?</>} intro="Yale’s ethical investment system looks participatory. The authority, however, concentrates as decisions move upward — while most holdings stay hidden." tone="dark"><section className="content-section">
+export default function Power(){return <InnerPage eyebrow="Power map" title={<>Who decides<br/>where $44B goes?</>} intro="Yale’s ethical investment system looks participatory. The authority, however, concentrates as decisions move upward while most holdings stay hidden." tone="dark"><section className="content-section">
   <div className="content-grid"><p className="content-label">The official chain</p><div className="prose"><h2>Advice travels up. Power stays at the top.</h2><div className="power-chain">
     <div className="power-node"><span>Community input</span><strong>Students, workers, faculty, alumni, New Haven</strong><p>Organize, research, submit proposals, testify, and create public pressure.</p></div>
     <div className="power-node"><span>Advisory</span><strong>ACIR</strong><p>The Advisory Committee on Investor Responsibility reviews issues and recommends action.</p></div>

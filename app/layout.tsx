@@ -7,7 +7,7 @@ const body = DM_Sans({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yaleendowmentjustice.org"),
-  title: { default: "Endowment Justice Collective", template: "%s — EJC" },
+  title: { default: "Endowment Justice Collective", template: "%s | EJC" },
   description: "Organizing for democratic control, transparency, divestment, and reinvestment at Yale.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   openGraph: {

@@ -5,7 +5,7 @@ const demands = [
   {
     number: "01",
     title: "Democratize",
-    copy: "Give students, workers, faculty, alumni, and New Haven residents real power over the decisions that shape our lives — including a university-wide senate with more than advisory authority and protections for protest.",
+    copy: "Give students, workers, faculty, alumni, and New Haven residents real power over the decisions that shape our lives, including a university-wide senate with more than advisory authority and protections for protest.",
     href: "/power",
   },
   {
@@ -25,7 +25,7 @@ export default function Home() {
         <div className="eyebrow">Endowment Justice Collective at Yale</div>
         <h1 id="hero-title">Yale’s money<br />is everyone’s business.</h1>
         <div className="hero-bottom">
-          <p className="hero-dek">We organize students, workers, alumni, and New Haven neighbors to make Yale’s wealth answer to people — not profit.</p>
+          <p className="hero-dek">We organize students, workers, alumni, and New Haven neighbors to make Yale’s wealth answer to people, not profit.</p>
           <div className="hero-actions">
             <Link className="button button-dark" href="/act">Join the collective <span>↗</span></Link>
             <Link className="text-link" href="#demands">See our demands <span>↓</span></Link>
@@ -38,7 +38,7 @@ export default function Home() {
           <span>Yale’s endowment</span>
           <span>As of June 30, 2025</span>
         </div>
-        <div className="ticker-value">$44.1B</div>
+        <div className="ticker-value">$44,100,000,000</div>
         <div className="ticker-foot">
           <span>Forty-four billion, one hundred million dollars.</span>
           <a href="https://news.yale.edu/2025/10/24/yale-reports-investment-return-fiscal-2025" target="_blank" rel="noreferrer">Source: Yale ↗</a>
@@ -48,7 +48,7 @@ export default function Home() {
       <section className="statement section-pad">
         <p className="section-kicker">Who we are</p>
         <div>
-          <h2>We follow the money — and build the power to change where it goes.</h2>
+          <h2>We follow the money and build the power to change where it goes.</h2>
           <p>EJC is a coalition fighting for democratic control, full transparency, and justice in Yale’s investments. The endowment is not a neutral pile of money. It is power: accumulated through land, labor, markets, and the choices Yale makes every day.</p>
           <Link className="arrow-link" href="/about">Meet the collective <span>→</span></Link>
         </div>
@@ -77,7 +77,7 @@ export default function Home() {
           <a href="https://yaledailynews.com/blog/2024/04/29/analysis-how-much-does-yale-invest-in-military-weapons-manufacturing/" target="_blank" rel="noreferrer">See the reporting ↗</a>
         </div>
         <div className="proof-chart" aria-label="Proportional illustration showing a 0.3 percent disclosed sliver and 99.7 percent kept out of public view">
-          <div className="chart-callout"><strong>0.3%</strong><span>disclosed</span><i aria-hidden="true">↓</i></div>
+          <div className="chart-callout"><strong>0.3%</strong><span>disclosed</span><i aria-hidden="true" /></div>
           <div className="chart-bar">
             <div className="chart-disclosed" aria-hidden="true" />
             <div className="chart-hidden"><span>99.7%</span><small>kept out of public view</small></div>
