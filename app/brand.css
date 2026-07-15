@@ -4,14 +4,18 @@
   flex: none;
 }
 
-.brand-logo {
+.brand-logo,
+.footer-brand-logo {
   display: block;
+  background: url("/ejc-logo.png") center / contain no-repeat;
+}
+
+.brand-logo {
   width: 62px;
   height: 62px;
 }
 
 .footer-brand-logo {
-  display: block;
   width: 96px;
   height: 96px;
 }

@@ -4,42 +4,58 @@ import "./power.css";
 
 export const metadata: Metadata = { title: "Power Map" };
 
-function MapConnector({ direction }: { direction: "up" | "down" }) {
-  const points = direction === "down" ? "5 36 10 41 15 36" : "5 8 10 3 15 8";
+const authorityPath = [
+  ["Yale Corporation", "Adopts investment policy."],
+  ["Investments Committee", "Approves managers and particular investments."],
+  ["Yale Investments", "Recommends and executes investment strategy."],
+  ["External managers", "Control many underlying holdings."],
+];
 
-  return <div className={`map-connector map-connector-${direction}`} aria-hidden="true">
-    <svg viewBox="0 0 20 44" focusable="false">
-      <path className="map-connector-line" d="M10 0V44" />
-      <polyline className="map-connector-head" points={points} />
-    </svg>
-  </div>;
+const ethicsPath = [
+  ["Yale community", "Submits ethical investment concerns."],
+  ["ACIR", "Reviews requests and advises CCIR."],
+  ["CCIR", "Chooses whether to recommend policy to the Corporation."],
+  ["Yale Corporation", "Makes the final policy decision."],
+];
+
+function DecisionPath({ id, label, note, steps, className }: {
+  id: string;
+  label: string;
+  note: string;
+  steps: string[][];
+  className: string;
+}) {
+  return <section className={`map-lane ${className}`} aria-labelledby={id}>
+    <header className="map-lane-header">
+      <p>{note}</p>
+      <h3 id={id}>{label}</h3>
+    </header>
+    <ol className="map-path">
+      {steps.map(([name, description], index) => <li key={name}>
+        <span className="map-step">{String(index + 1).padStart(2, "0")}</span>
+        <div>
+          <h4>{name}</h4>
+          <p>{description}</p>
+        </div>
+      </li>)}
+    </ol>
+  </section>;
 }
 
 export default function Power() {
   return <InnerPage eyebrow="Power map" title={<>How Yale makes investment decisions</>} intro="Investment management and ethical review follow separate paths. Both end with the Yale Corporation." tone="dark">
     <section className="content-section power-map-section">
-      <header className="map-intro"><p className="content-label">Formal structure</p><div><h2>Authority and review</h2><p>Solid lines show investment authority. Dotted lines show ethical recommendations.</p></div></header>
-      <div className="governance-map" aria-label="Power map of Yale endowment governance">
-        <div className="map-top"><h3>Yale Corporation</h3><p>Adopts investment policy.</p></div>
+      <header className="map-intro">
+        <p className="content-label">Formal structure</p>
+        <div>
+          <h2>Two paths to a final decision</h2>
+          <p>Each column reads from top to bottom. Investment authority is delegated; ethical concerns move through review and recommendation.</p>
+        </div>
+      </header>
+      <div className="governance-map" aria-label="Decision paths for Yale endowment governance">
         <div className="map-lanes">
-          <section className="map-lane authority-lane" aria-labelledby="authority-title">
-            <h3 id="authority-title">Investment authority</h3>
-            <MapConnector direction="down" />
-            <div className="map-node"><h4>Investments Committee</h4><p>Approves managers and particular investments.</p></div>
-            <MapConnector direction="down" />
-            <div className="map-node"><h4>Yale Investments</h4><p>Recommends and executes investment strategy.</p></div>
-            <MapConnector direction="down" />
-            <div className="map-node"><h4>External managers</h4><p>Control many underlying holdings.</p></div>
-          </section>
-          <section className="map-lane ethics-lane" aria-labelledby="ethics-title">
-            <h3 id="ethics-title">Ethical review</h3>
-            <MapConnector direction="up" />
-            <div className="map-node"><h4>CCIR</h4><p>Chooses whether to recommend policy to the Corporation.</p></div>
-            <MapConnector direction="up" />
-            <div className="map-node"><h4>ACIR</h4><p>Reviews requests and advises CCIR.</p></div>
-            <MapConnector direction="up" />
-            <div className="map-node"><h4>Yale community</h4><p>Submits ethical investment concerns.</p></div>
-          </section>
+          <DecisionPath id="authority-title" label="Investment authority" note="Delegated control" steps={authorityPath} className="authority-lane" />
+          <DecisionPath id="ethics-title" label="Ethical review" note="Community to Corporation" steps={ethicsPath} className="ethics-lane" />
         </div>
       </div>
       <dl className="map-facts"><div><dt>Final decision</dt><dd>Yale Corporation</dd></div><div><dt>ACIR authority</dt><dd>Advisory only</dd></div><div><dt>Formal New Haven seats</dt><dd>None listed</dd></div></dl>

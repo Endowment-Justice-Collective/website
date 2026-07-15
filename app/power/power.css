@@ -1,35 +1,108 @@
-.map-connector {
+.governance-map {
+  overflow: hidden;
+}
+
+.map-lane {
+  padding: 34px 38px 42px;
+}
+
+.map-lane-header {
+  min-height: 92px;
+  padding-bottom: 24px;
+}
+
+.map-lane-header p {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.map-lane-header h3 {
+  margin: 0;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 31px;
+  font-weight: 500;
+  letter-spacing: -.025em;
+}
+
+.map-path {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.map-path li {
   display: grid;
-  place-items: center;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+  min-height: 128px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+}
+
+.map-step {
+  padding-top: 5px;
   color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
 }
 
-.map-connector::before,
-.map-connector::after {
-  content: none;
-}
-
-.map-connector svg {
-  display: block;
-  width: 20px;
-  height: 100%;
-  overflow: visible;
-}
-
-.map-connector-line,
-.map-connector-head {
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-
-.map-connector-up {
+.ethics-lane .map-step {
   color: var(--blue);
 }
 
-.map-connector-up .map-connector-line {
-  stroke-dasharray: 1 5;
+.map-path h4 {
+  margin: 0;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+
+.map-path p {
+  margin: 7px 0 0;
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .map-lane-header {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .map-lane {
+    padding: 24px 18px 30px;
+  }
+
+  .map-lane-header {
+    padding-bottom: 18px;
+  }
+
+  .map-lane-header h3 {
+    font-size: 27px;
+  }
+
+  .map-path li {
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 10px;
+    min-height: 0;
+    padding: 19px 0;
+  }
+
+  .map-path h4 {
+    font-size: 22px;
+  }
+
+  .map-path p {
+    font-size: 13px;
+  }
 }
