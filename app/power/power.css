@@ -6,6 +6,10 @@
   grid-column: 2;
 }
 
+.content-grid-single > div {
+  grid-column: 2;
+}
+
 .map-lane {
   padding: 34px 38px 42px;
 }
@@ -78,6 +82,10 @@
 
 @media (max-width: 900px) {
   .map-intro-single > div {
+    grid-column: 1;
+  }
+
+  .content-grid-single > div {
     grid-column: 1;
   }
 
