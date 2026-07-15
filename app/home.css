@@ -1,0 +1,3 @@
+.hero-single {
+  grid-template-columns: minmax(0, 1050px);
+}

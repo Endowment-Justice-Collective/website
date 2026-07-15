@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./site-chrome";
+import "./home.css";
 
 export default function Home() {
   return <main>
     <SiteHeader />
 
-    <section className="hero" aria-labelledby="hero-title">
+    <section className="hero hero-single" aria-labelledby="hero-title">
       <div className="hero-copy">
         <p className="eyebrow">Endowment Justice Collective at Yale</p>
         <h1 id="hero-title">Organizing for a transparent and accountable Yale</h1>
@@ -15,10 +16,6 @@ export default function Home() {
           <Link className="text-link" href="/demands">Read our demands</Link>
         </div>
       </div>
-      <aside className="hero-note">
-        <p>Our current priorities</p>
-        <ol><li>Democratize university governance</li><li>Disclose investments</li><li>Divest from harmful industries</li><li>Reinvest in affected communities</li></ol>
-      </aside>
     </section>
 
     <section className="endowment-summary" aria-label="Yale endowment value">

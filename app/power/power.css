@@ -1,0 +1,35 @@
+.map-connector {
+  display: grid;
+  place-items: center;
+  color: var(--green);
+}
+
+.map-connector::before,
+.map-connector::after {
+  content: none;
+}
+
+.map-connector svg {
+  display: block;
+  width: 20px;
+  height: 100%;
+  overflow: visible;
+}
+
+.map-connector-line,
+.map-connector-head {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.map-connector-up {
+  color: var(--blue);
+}
+
+.map-connector-up .map-connector-line {
+  stroke-dasharray: 1 5;
+}

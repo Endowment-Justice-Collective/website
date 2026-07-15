@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Newsreader } from "next/font/google";
 import "./globals.css";
+import "./brand.css";
 
 const display = Newsreader({ subsets: ["latin"], variable: "--font-display" });
 const body = DM_Sans({ subsets: ["latin"], variable: "--font-body" });

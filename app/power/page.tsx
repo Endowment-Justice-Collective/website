@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
 import { InnerPage } from "../site-chrome";
+import "./power.css";
 
 export const metadata: Metadata = { title: "Power Map" };
+
+function MapConnector({ direction }: { direction: "up" | "down" }) {
+  const points = direction === "down" ? "5 36 10 41 15 36" : "5 8 10 3 15 8";
+
+  return <div className={`map-connector map-connector-${direction}`} aria-hidden="true">
+    <svg viewBox="0 0 20 44" focusable="false">
+      <path className="map-connector-line" d="M10 0V44" />
+      <polyline className="map-connector-head" points={points} />
+    </svg>
+  </div>;
+}
 
 export default function Power() {
   return <InnerPage eyebrow="Power map" title={<>How Yale makes investment decisions</>} intro="Investment management and ethical review follow separate paths. Both end with the Yale Corporation." tone="dark">
@@ -12,20 +24,20 @@ export default function Power() {
         <div className="map-lanes">
           <section className="map-lane authority-lane" aria-labelledby="authority-title">
             <h3 id="authority-title">Investment authority</h3>
-            <div className="map-connector map-connector-down" aria-hidden="true" />
+            <MapConnector direction="down" />
             <div className="map-node"><h4>Investments Committee</h4><p>Approves managers and particular investments.</p></div>
-            <div className="map-connector map-connector-down" aria-hidden="true" />
+            <MapConnector direction="down" />
             <div className="map-node"><h4>Yale Investments</h4><p>Recommends and executes investment strategy.</p></div>
-            <div className="map-connector map-connector-down" aria-hidden="true" />
+            <MapConnector direction="down" />
             <div className="map-node"><h4>External managers</h4><p>Control many underlying holdings.</p></div>
           </section>
           <section className="map-lane ethics-lane" aria-labelledby="ethics-title">
             <h3 id="ethics-title">Ethical review</h3>
-            <div className="map-connector map-connector-up" aria-hidden="true" />
+            <MapConnector direction="up" />
             <div className="map-node"><h4>CCIR</h4><p>Chooses whether to recommend policy to the Corporation.</p></div>
-            <div className="map-connector map-connector-up" aria-hidden="true" />
+            <MapConnector direction="up" />
             <div className="map-node"><h4>ACIR</h4><p>Reviews requests and advises CCIR.</p></div>
-            <div className="map-connector map-connector-up" aria-hidden="true" />
+            <MapConnector direction="up" />
             <div className="map-node"><h4>Yale community</h4><p>Submits ethical investment concerns.</p></div>
           </section>
         </div>
