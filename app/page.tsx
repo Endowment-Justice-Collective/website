@@ -8,7 +8,7 @@ export default function Home() {
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-copy">
         <p className="eyebrow">Endowment Justice Collective at Yale</p>
-        <h1 id="hero-title">Organizing for a transparent and accountable Yale endowment.</h1>
+        <h1 id="hero-title">Organizing for a transparent and accountable Yale</h1>
         <p className="hero-dek">EJC is a coalition of students, workers, alumni, and New Haven residents. We research Yale’s investments, advocate for divestment from harmful industries, and organize for democratic oversight of university decisions.</p>
         <div className="hero-actions">
           <Link className="button button-dark" href="/act">Get involved</Link>
